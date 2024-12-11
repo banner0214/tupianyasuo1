@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图片压缩工具</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/upload-icon.svg">
 </head>
 <body>
     <div class="container">
@@ -46,12 +47,16 @@
                 <div class="preview-container">
                     <div class="preview-original">
                         <h3>原图</h3>
-                        <div class="image-container" id="originalPreview"></div>
+                        <div class="image-container" id="originalPreview">
+                            <img id="previewImage" alt="原图预览">
+                        </div>
                         <div class="image-info" id="originalInfo"></div>
                     </div>
                     <div class="preview-compressed">
                         <h3>压缩后</h3>
-                        <div class="image-container" id="compressedPreview"></div>
+                        <div class="image-container" id="compressedPreview">
+                            <img id="compressedImage" alt="压缩预览">
+                        </div>
                         <div class="image-info" id="compressedInfo"></div>
                     </div>
                 </div>
@@ -74,4 +79,4 @@
     </div>
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
