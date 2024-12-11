@@ -4,7 +4,7 @@
 
 ## 在线使用
 
-访问 https://你的用户名.github.io/image-compressor/
+访问 https://banner0214.github.io/tupianyasuo1/
 
 ## 主要功能
 
@@ -18,12 +18,12 @@
 
 1. 克隆仓库：
 ```bash
-git clone https://github.com/你的用户名/image-compressor.git
+git clone https://github.com/banner0214/tupianyasuo1.git
 ```
 
 2. 进入项目目录：
 ```bash
-cd image-compressor
+cd tupianyasuo1
 ```
 
 3. 使用 VS Code 的 Live Server 或其他本地服务器运行项目
