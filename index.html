@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <!-- 压缩设置 -->
+            <!-- 压缩设置区域 -->
             <div class="compression-settings">
                 <div class="setting-item">
                     <label for="quality">压缩质量</label>
@@ -38,27 +38,22 @@
                 </div>
                 <div class="setting-item">
                     <label for="maxWidth">最大宽度</label>
-                    <input type="number" id="maxWidth" value="1920" min="100">
+                    <input type="number" id="maxWidth" min="100" max="4096" value="1920">
+                    <span>像素</span>
                 </div>
             </div>
 
             <!-- 预览区域 -->
-            <div class="preview-area">
-                <div class="preview-container">
-                    <div class="preview-original">
-                        <h3>原图</h3>
-                        <div class="image-container" id="originalPreview">
-                            <img id="previewImage" alt="原图预览">
-                        </div>
-                        <div class="image-info" id="originalInfo"></div>
-                    </div>
-                    <div class="preview-compressed">
-                        <h3>压缩后</h3>
-                        <div class="image-container" id="compressedPreview">
-                            <img id="compressedImage" alt="压缩预览">
-                        </div>
-                        <div class="image-info" id="compressedInfo"></div>
-                    </div>
+            <div class="preview-container">
+                <div class="image-container">
+                    <h3 class="preview-title">原图预览</h3>
+                    <img id="originalPreview" alt="原图预览">
+                    <div class="image-info" id="originalInfo"></div>
+                </div>
+                <div class="image-container">
+                    <h3 class="preview-title">压缩预览</h3>
+                    <img id="compressedPreview" alt="压缩预览">
+                    <div class="image-info" id="compressedInfo"></div>
                 </div>
             </div>
 

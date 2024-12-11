@@ -79,16 +79,126 @@ body {
     border-radius: 8px;
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 30px;
 }
 
 .setting-item {
-    margin-bottom: 1rem;
+    flex: 1;
+    padding: 10px;
 }
 
 .setting-item label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     color: #666;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* 滑块样式 */
+.setting-item input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 10px 0;
+}
+
+/* Webkit (Chrome, Safari) */
+.setting-item input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Firefox */
+.setting-item input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Edge */
+.setting-item input[type="range"]::-ms-thumb {
+    width: 18px;
+    height: 18px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* 滑块轨道样式 */
+.setting-item input[type="range"]::-webkit-slider-runnable-track {
+    background: #e0e0e0;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.setting-item input[type="range"]::-moz-range-track {
+    background: #e0e0e0;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.setting-item input[type="range"]::-ms-track {
+    background: #e0e0e0;
+    height: 6px;
+    border-radius: 3px;
+}
+
+/* 数字输入框样式 */
+.setting-item input[type="number"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: #f8f9fa;
+    appearance: textfield;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.setting-item input[type="number"]:hover {
+    border-color: #4CAF50;
+}
+
+.setting-item input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* 移除数字输入框的上下箭头 */
+.setting-item input[type="number"]::-webkit-inner-spin-button,
+.setting-item input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.setting-item span {
+    display: inline-block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 /* 预览区域样式 */
@@ -102,11 +212,11 @@ body {
 .image-container {
     position: relative;
     width: 100%;
-    height: 300px;
+    padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    background-color: #fafafa;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .image-container img {
@@ -121,8 +231,12 @@ body {
 
 .image-info {
     margin-top: 10px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 0 0 4px 4px;
     font-size: 0.9rem;
     color: #666;
+    text-align: center;
 }
 
 /* 批量处理区域 */
@@ -170,4 +284,16 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* 预览区域标题样式 */
+.preview-title {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid #e9ecef;
 }
